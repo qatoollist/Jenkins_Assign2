@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'MVN building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'JUnit Selenium Testing...'
+            }
+        }
+        stage('Deploy-to-preprod') {
+            steps {
+                echo 'Deploy to preprod...'
+            }
+        }
+        stage('Deploy-to-prod') {
+            steps {
+                echo 'Deploy to Prod...'
+            }
+        }
+    }
+}
